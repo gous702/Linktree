@@ -1,70 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Cloud Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-
-  <style>
-    .hidden {
-      display: none;
-    }
-
-    .profile {
-      width: 200px;
-      border-radius: 10px;
-      margin-top: 15px;
-    }
-
-    .card {
-      text-align: center;
-      padding: 20px;
-    }
-
-    .links a {
-      display: block;
-      margin: 10px;
-      cursor: pointer;
-      color: blue;
-      text-decoration: underline;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cloud Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <div class="container">
+        <!-- Profile Photo -->
+        <img src="gouse.jpg" alt="My Photo" class="profile-photo">
 
-  <div class="card">
+        <h1>My Cloud Projects</h1>
 
-    <h1>Gouse Babu Shaik</h1>
-    <p>Student | Learning Web Development & Cloud Technologies</p>
-
-    <div class="links">
-      <a onclick="showImage()">👤 View My Profile Image</a>
-
-      <a href="https://gous702.github.io/gouse-cloud-dev-netlify/" target="_blank">
-        🌐 My Netlify Project
-      </a>
-
-      <a href="https://gous702.github.io/my_new_folder/" target="_blank">
-        🔥 My Firebase Project
-      </a>
-
-      <a href="https://github.com/gous702" target="_blank">
-        💻 My GitHub
-      </a>
+        <!-- Project Links -->
+        <a href="https://gouse-cloud-dev-netlify.netlify.app/" target="_blank" class="link-button">Netlify Project</a>
+        <a href="https://gouse-cloud-dev-netlify.netlify.app/" target="_blank" class="link-button">Firebase Project</a>
     </div>
-
-    <!-- Hidden Image -->
-    <img id="profileImage" src="image/gouse.jpg" class="profile hidden">
-
-  </div>
-
-  <script>
-    function showImage() {
-      const img = document.getElementById("profileImage");
-      img.classList.toggle("hidden");
-    }
-  </script>
-
 </body>
 </html>
