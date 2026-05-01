@@ -4,17 +4,44 @@
   <meta charset="UTF-8">
   <title>My Cloud Portfolio</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    .hidden {
+      display: none;
+    }
+
+    .profile {
+      width: 200px;
+      border-radius: 10px;
+      margin-top: 15px;
+    }
+
+    .card {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .links a {
+      display: block;
+      margin: 10px;
+      cursor: pointer;
+      color: blue;
+      text-decoration: underline;
+    }
+  </style>
 </head>
+
 <body>
 
   <div class="card">
-    <img src="image/gouse.jpg" alt="Profile" class="profile">
 
     <h1>Gouse Babu Shaik</h1>
     <p>Student | Learning Web Development & Cloud Technologies</p>
 
     <div class="links">
-      <a href=" https://gous702.github.io/gouse-cloud-dev-netlify/" target="_blank">
+      <a onclick="showImage()">👤 View My Profile Image</a>
+
+      <a href="https://gous702.github.io/gouse-cloud-dev-netlify/" target="_blank">
         🌐 My Netlify Project
       </a>
 
@@ -26,7 +53,18 @@
         💻 My GitHub
       </a>
     </div>
+
+    <!-- Hidden Image -->
+    <img id="profileImage" src="image/gouse.jpg" class="profile hidden">
+
   </div>
+
+  <script>
+    function showImage() {
+      const img = document.getElementById("profileImage");
+      img.classList.toggle("hidden");
+    }
+  </script>
 
 </body>
 </html>
